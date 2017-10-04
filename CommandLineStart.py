@@ -5,6 +5,7 @@
 
 import subprocess
 # --fdm=null turns the fdm system off.
+# http://wiki.flightgear.org/Command_line_options
 cl_options = {
     'telnet':5500,
     'httpd':8080,
