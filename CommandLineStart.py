@@ -25,7 +25,8 @@ properties = {
     '/autopilot/locks/speed':'speed-with-throttle',
     '/autopilot/locks/heading':'wing-leveler',
     '/engines/engine[0]/running':'true',
-    '/engines/engine[1]/running':'true'
+    '/engines/engine[1]/running':'true',
+    '/controls/gear/gear-down':'false'
     
     
         }
