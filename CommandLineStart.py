@@ -19,6 +19,7 @@ cl_options = {
     'roc':0,
     'roll':0,
 }
+# http://wiki.flightgear.org/Common_Aircraft_Properties
 properties = {
     '/autopilot/settings/target-altitude-ft':36000,
     '/autopilot/settings/target-speed-kt':270,
