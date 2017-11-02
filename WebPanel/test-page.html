@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<!-- Tweaks for panel on an ipad - from https://gist.github.com/tfausak/2222823 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" -->
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<title>Test page</title>
+<style type="text/css" media="screen">
+
+html, body, #wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	overflow: hidden;
+}
+
+
+body {
+	background-color: #FFFFFF;
+}
+
+
+</style>
+</head>
+
+<body>
+
+    <!-- always use a wrapper div to get a handle for the knockout bindings -->
+    <div id="wrapper">
+
+   <!--  add a brown box for the ground
+   check http://knockoutjs.com/documentation/style-binding.html for the data-bind syntax
+   -->
+	 		Fuel on board is <span data-bind='text : fob_lbs'></span> lbs<br />
+
+			Engine 0 N1 <span data-bind='text : eg0_n1'></span><br />
+			Engine 1 N1 <span data-bind='text : eg1_n1'></span><br />
+			Engine 0 N3 <span data-bind='text : eg0_n3'></span><br />
+			Engine 1 N3 <span data-bind='text : eg1_n3'></span><br />
+			Engine 0 EPR <span data-bind='text : eg0_epr'></span><br />
+			Engine 1 EPR <span data-bind='text : eg1_epr'></span><br />
+			Engine 0 EGT <span data-bind='text : eg0_egt'></span><br />
+			Engine 1 EGT <span data-bind='text : eg1_egt'></span><br />
+			Engine 0 Oil PSI <span data-bind='text : eg0_oilpsi'></span><br />
+			Engine 1 Oil PSI <span data-bind='text : eg1_oilpsi'></span><br />
+
+
+    </div>
+
+</body>
+<!--
+  this is the only script tag required, require.js takes care of loading everyting needed
+  first thing requirejs does is to load the script defined in the data-main attribute, "./horizon.js" in
+  our case. Note: the ".js" extension gets added automatically.
+ -->
+<script type="text/javascript" async="async" data-main="./ecam.js" src="/3rdparty/require/require.js"></script>
